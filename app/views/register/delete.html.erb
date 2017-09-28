@@ -1,0 +1,20 @@
+<h1>Register#delete</h1>
+<p>Find me in app/views/register/delete.html.erb</p>
+
+
+<%= form_for(:register, :url => {:action => 'destroy', :id => @register_delete.id}) do |d| %>
+
+<%= "ID" %>
+<%= "Name" %>
+<%= "Subject" %>
+<%= "Quantity" %>
+<%= "Class" %>
+<br>
+<%= @register_delete.id %>
+<%= @register_delete.Name %>
+<%= @register_delete.Quantity %>
+<%= @register_delete.Subject %>
+<%= @register_delete.Class %>
+<br>
+<%= submit_tag('Delete Register') %>
+<% end %>

@@ -1,0 +1,21 @@
+
+
+<h1>Books#delete</h1>
+
+<h1>Are you sure you want to delete?</h1>
+<%= "Name --" %>
+<%= "Subject --" %>
+<%= "Quantity --" %>
+<%= "Class" %>
+<%= "created_at" %>
+<%= "updated_at" %>
+
+<%= form_for(:book, :url => {:action => 'destroy', :id => @book.id}) do |f| %>
+<%= f.text_field(:Name) %>
+<%= f.text_field(:Subject) %>
+<%= f.text_field(:Quantity) %>
+<%= f.text_field(:Class) %>
+<%= submit_tag("Delete Book") %>
+<% end %>
+<br>
+<br>

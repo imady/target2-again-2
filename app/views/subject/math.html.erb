@@ -1,0 +1,26 @@
+<h1>Subject#math</h1>
+<H1> MATHS </H1>
+
+<%= 1+1 %>
+<br>
+<br>
+<% var = "pakistan" %>
+<h1><%= "This is #{var}" %> </h1>
+
+<h1>
+<% 3.times do %>
+<%= "xxx" %>
+<br>
+<% end %>
+</h1>
+
+<% 3.times do %>
+<% var1 = "Karachi" %>
+<%= "My city is #{var1}" %>
+<br>
+<% end %>
+<a href="/subject/english"> English Link </a>
+<br>
+<%= link_to('English Link', {:action => 'english'}) %>
+
+<%= link_to('link with parameters', {:action=>'english',:page=>5, :id=> 20})%>

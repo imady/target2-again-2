@@ -1,0 +1,16 @@
+<h1>Subject#english</h1>
+<h1> ENGLISH </H1>
+
+<%= "Page Numbers with intence variable" %>
+<br>
+<% @pages.each do |n| %>
+<%= n %> <br>
+<% end %>
+
+<%= link_to('Math Link',{:action => 'math'}) %>
+<br>
+<br>
+
+ID: <%= @id %>
+<br>
+Page: <%= @page.to_i + 1 %>

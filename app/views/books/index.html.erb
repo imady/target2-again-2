@@ -1,0 +1,34 @@
+<% if !flash[:notice].blank? %>
+<%= flash[:notice] %>
+<% end %>
+
+<h1>Books#index</h1>
+<%= "ID --" %>
+<%= "Name --" %>
+<%= "Subject --" %>
+<%= "Quantity --" %>
+<%= "Class" %>
+<br>
+<br>
+<% @book.each do |book|%>
+<%= book.id %> 
+<%= book.Name %> 
+<%= book.Subject %>
+<%= book.Quantity %> 
+<%= book.Class %>
+<%= link_to("Show", {:action => 'show', :id => book.id}, :class => 'action show')%>
+<%= link_to("Edit", {:action => 'edit',:id => book.id}, :class => 'action edit')%>
+<%= link_to("New", :action => 'new', :class => 'action new') %>
+<%= link_to("Delete", {:action => 'delete', :id => book.id}) %>
+<br>
+<% end %>
+
+
+
+
+
+
+
+
+
+

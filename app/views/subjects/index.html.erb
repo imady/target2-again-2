@@ -1,0 +1,32 @@
+<% if !flash[:notice].blank? %>
+<%= flash[:notice] %>
+<% end %>
+
+<h1> Welcome to the Board of Ruby on Rails Subject Database </h1>
+
+<h2> List of Subjects according new one come first </h2>
+<h2> ------------- </h2>
+<table>
+
+<h3>
+<tr>
+<td> <h3> Subject Name </h3>	 </td> 
+<td> <h3> Position </h3> </td> 
+<td> <h3> Visible </h3> </td> 
+<td> <h3> Created </h3> </td> 
+<td> <h3> Updated </h3> </td>
+</tr>
+<% @subjects.each do |subject| %>
+
+<tr>
+<td> <%= subject.Name %> </td>
+<td> <%= subject.Position %> </td>
+<td> <%= subject.Visible %> </td>
+
+<td> <%= link_to("new", {:action => 'new', :id => subject.id}, :class => 'action show') %> </td>
+<td> <%= link_to("show", {:action => 'show', :id => subject.id}, :class => 'action show') %> </td>
+<td> <%= link_to("edit", {:action => 'edit',:id => subject.id}, :class => 'action edit') %> </td>
+<td> <%= link_to("delete",{:action => 'delete', :id => subject.id}, :class => 'action delete') %> </td>
+</tr>
+<% end %>
+</table>

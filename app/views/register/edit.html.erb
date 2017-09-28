@@ -1,0 +1,14 @@
+<h1>Register#edit</h1>
+<p>Find me in app/views/register/edit.html.erb</p>
+
+<%= form_for(:register, :url => {:action => 'update', :id => @register.id}) do |n| %>
+<%= n.text_field(:Name) %>
+<%= n.text_field(:Quantity) %>
+<%= n.text_field(:Subject) %>
+<%= n.text_field(:Class) %>
+
+
+<%= submit_tag("Edit Register") %>
+<% end %>
+
+ 

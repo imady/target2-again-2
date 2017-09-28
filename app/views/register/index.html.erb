@@ -1,0 +1,41 @@
+<h1>Register#index</h1>
+
+<%= link_to("NEW REGISTER",:action => 'new', :action => 'new') %>
+
+<h4>
+<%= "ID" %>
+<%= "Name" %>
+<%= "Subject" %>
+<%= "Quantity" %>
+<%= "Class" %>
+</h4>
+
+<% @register.each do |r|%>
+<%= r.id %>
+<%= r.Name %>
+<%= r.Subject %>
+<%= r.Quantity %>
+<%= r.Class %>
+
+<%= link_to("show",{:action => 'show', :id => r.id}, :action => 'show')%>
+<%= link_to("edit", {:action => 'edit', :id => r.id}, :action => 'edit')%>
+<%= link_to("delete", {:action => 'delete', :id => r.id}, :action=>'delete') %>
+
+<br>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

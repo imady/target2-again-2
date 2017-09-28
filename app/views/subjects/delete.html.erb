@@ -1,0 +1,17 @@
+<h1>Subjects#Delete</h1>
+
+<%= form_for(:subject, :action => 'destroy', :id => @book.id) do |f| %>
+
+<%= "Name" %>
+<%= f.text_field (:Name)  %> <br> <br>
+<%= "Position" %>
+<%= f.text_field (:Position) %> <br> <br>
+<%= "Visible" %>
+<%= f.text_field (:Visible) %> <br> <br>
+
+<div class="form-button">
+<%= submit_tag("Delete Subject") %>
+</div>
+
+<% end %>
+

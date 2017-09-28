@@ -1,0 +1,17 @@
+<h1>Subjects#Edit</h1>
+
+<%= form_for(:subject, :url => {:action => 'update', :id => @subject.id}) do |f| %>
+
+<%= "Name" %>
+<%= f.text_field (:Name)  %> <br> <br>
+<%= "Position" %>
+<%= f.text_field (:Position) %> <br> <br>
+<%= "Visible" %>
+<%= f.text_field (:Visible) %> <br> <br>
+
+<div class="form-button">
+<%= submit_tag("Update Subject") %>
+</div>
+
+<% end %>
+
